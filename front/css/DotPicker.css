@@ -1,0 +1,25 @@
+.dotPicker {
+  display: inline-block;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.inner {
+  width: 0;
+  height: 0;
+  border-radius: inherit;
+  color:#fff;
+  background: currentColor;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: all 0.1s ease;
+}
+.dotPicker:hover .inner, .dotPicker.focus .inner {
+  width: 40%;
+  height: 40%;
+}

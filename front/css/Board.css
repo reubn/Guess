@@ -1,0 +1,21 @@
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.level {
+  position: absolute;
+  top: calc(-50% + 4rem);
+  transform: translate(-50%, -25%);
+  font-size: 1.75rem;
+  font-family: Proxima Nova;
+  font-weight: 500;
+  color: #ececec;
+}
+@media screen and (orientation:portrait) {
+  .board {
+    top: calc(50% - 4rem);
+  }
+}

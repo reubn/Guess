@@ -1,0 +1,33 @@
+.previous {
+  margin-bottom: -1rem;
+}
+.dots {
+  display: block;
+  margin-top: 1rem;
+}
+.dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.results {
+  height: 1rem;
+  display: block;
+}
+.result {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 25%;
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.F {
+  background: #3d3d3d
+}
+.H {
+  background: #e8e8e8
+}
