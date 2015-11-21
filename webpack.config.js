@@ -23,7 +23,10 @@ module.exports = {
       }
     }, {
       test: /\.css$/,
-      loader: "dragonfruit!style!css?" + (process.env.NODE_ENV !== "production" ? "localIdentName=[local]-[name]-[hash:base64:10]&" : "") + "modules=true"
+      loaders: ["dragonfruit",
+                "style",
+                "css?" + (process.env.NODE_ENV !== "production" ? "localIdentName=[local]-[name]-[hash:base64:10]&" : "") + "modules=true",
+                "autoprefixer?{browsers:['> 1%', 'last 2 versions'], cascade: false}"]
     }, {
       test: /\.(eot)|(svg)|(ttf)|(woff2?)$/,
       loader: "file-loader"
@@ -35,7 +38,10 @@ module.exports = {
       "__DEVTOOLS__": process.env.NODE_ENV !== "production"
     }),
     new webpack.optimize.UglifyJsPlugin({
-      minimize: true
+      minimize: true,
+      output: {
+        comments: false
+      }
     })
   ],
   resolve: {
