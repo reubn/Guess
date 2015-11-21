@@ -12,7 +12,7 @@ module.exports = React.createClass({
       totalScore: this.props.game.score,
       guessNumberThisLevel: 0,
       guess: {
-        dots: Array.apply(null, {length: this.props.game.config.length}).map(Object),
+        dots: Array(this.props.game.config.length).fill({}),
         result: []
       }
     }
@@ -41,7 +41,7 @@ module.exports = React.createClass({
           result: result
         }
       })
-      if (result.join("") === "FFFF") {
+      if (result.join() === Array(this.props.game.config.length).fill("F").join()) {
         this.win(guess);
       } else if(this.state.guessNumberThisLevel === this.props.game.config.handicap) {
         this.loose();
