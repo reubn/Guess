@@ -2,6 +2,7 @@ const React = require("react");
 const styles = require("DotPicker.css");
 
 module.exports = React.createClass({
+  displayName: "DotPicker",
   render: function(){
     return <section className={styles("dotPicker", {focus: this.props.focus})}
                     style={{background: this.props.type.hex}}

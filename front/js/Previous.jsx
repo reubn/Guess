@@ -2,6 +2,7 @@ const React = require("react");
 const styles = require("Previous.css");
 
 module.exports = React.createClass({
+  displayName: "Previous",
   render: function(){
     return <section className={styles("previous")}>
       <span className={styles("results")}>

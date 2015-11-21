@@ -5,6 +5,7 @@ const styles = require("Picker.css");
 const DotPicker = require("DotPicker");
 
 module.exports = React.createClass({
+  displayName: "Picker",
   getInitialState: function(){
     return {
       focus: -1,

@@ -6,6 +6,7 @@ const Previous = require("Previous")
 const FillPercentText = require("FillPercentText")
 
 module.exports = React.createClass({
+  displayName: "Board",
   getInitialState: function(){
     return {
       totalScore: this.props.game.score,
