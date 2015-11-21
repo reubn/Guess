@@ -23,7 +23,7 @@ module.exports = {
       }
     }, {
       test: /\.css$/,
-      loader: "dragonfruit!style!css?localIdentName=[local]-[name]-[hash:base64:10]&modules=true"
+      loader: "dragonfruit!style!css?" + (process.env.NODE_ENV !== "production" ? "localIdentName=[local]-[name]-[hash:base64:10]&" : "") + "modules=true"
     }, {
       test: /\.(eot)|(svg)|(ttf)|(woff2?)$/,
       loader: "file-loader"
