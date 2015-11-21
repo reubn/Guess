@@ -28,9 +28,7 @@ module.exports = React.createClass({
     });
   },
   guess: function(guess){
-    console.log("GUESS", guess, this.state.guess.dots)
     if (!this.state.guess.dots.every((a, i) => {
-      console.log(a, guess[i])
       return a.key === guess[i].key
     })) {
       const result = this.props.game.guess(guess)
@@ -50,12 +48,10 @@ module.exports = React.createClass({
       }
     }
   },
-  win: function(guess){
-    console.log("YOUVE WON!!", guess)
+  win: function(){
     this.newLevel(1)
   },
   loose: function(){
-    console.log("YOU LOOSE!!")
     this.newLevel(0)
   },
   newLevel: function(increase){

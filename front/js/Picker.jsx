@@ -40,7 +40,6 @@ module.exports = React.createClass({
     this.forceUpdate()
   },
   submit: function(e){
-    console.log("SUBMIT")
     this.props.board.guess(this.state.types.slice(0))
     if (e) e.preventDefault();
   },
