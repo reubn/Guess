@@ -7,7 +7,7 @@
     "start": "node index.js --harmony",
     "build": "webpack --progress --colors --watch"
   },
-  "author": "Reuben Eggar",
+  "author": "Reuben",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
